@@ -7,7 +7,9 @@ plink2 --bfile yri_filt --maf 0.05 --r2 triangle gz --out yri_ld
 plink2 --bfile ../test --keep yri.txt --make-bed --out yri_filt
 awk '$3 =="YRI"{print $1,$2}' pops.txt > popfiles/yri.txt
 
-#to generate random windows (for performance test)
+
+# to generate random windows (for performance test)
+
 import numpy as np
 
 def rwg(N,l,a,b):
